@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-   <link rel="stylesheet" href="fonts/fonts.css"> <!-- подключили шрифты -->
-    <link rel="icon" href="images/logo-black.svg"> <!-- фавиконка -->  
-    <link rel="stylesheet" href="styles/global.css"> <!-- добавили global-->
-    <link rel="stylesheet" href="styles/style.css"> <!-- добавили css -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="icon" href="images/logo-black.svg">  
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head> 
   
   <body>
@@ -54,20 +54,28 @@
       
       <section class="lots" id="lots">
         <h2 class="lots-title">лоты</h2>
-          <article class="lot-card-film lot-film">
-            <h3><a href="lot1">фильм режиссёра, который бросил киношколу</a></h3>
-            <p>Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
-          </article>
+        <ul class="lots-list">
+          <li class="lots-item lot-film">
+            <a href="lot1" class="lot-card">
+              <h3 class="lot-card__title">фильм режиссёра, который бросил киношколу</h3>
+              <p class="lot-card__description">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
+            </a>
+          </li>
   
-          <article class="lot-card-book lot-book">
-            <h3><a href="lot2">книга, где описан один скучный день из жизни рекламного агента</a></h3>
-            <p>Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
-          </article>
+          <li class="lots-item lot-book">
+            <a href="lot2" class="lot-card">
+              <h3 class="lot-card__title">книга, где описан один скучный день из жизни рекламного агента</h3>
+              <p class="lot-card__description">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
+            </a>
+          </li>
   
-          <article class="lot-card-picture lot-picture">
-            <h3><a href="lot3">картина, которую повторит даже 5-летний сын маминой подруги</a></h3>
-            <p>Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
-          </article>
+          <li class="lots-item lot-picture">
+            <a href="lot3" class="lot-card">
+              <h3 class="lot-card__title">картина, которую повторит даже 5-летний сын маминой подруги</h3>
+              <p class="lot-card__description">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
+            </a>
+          </li>
+        </ul>
 
         <a href="/" class="lots-more">посмотреть больше</a>
       </section>
@@ -113,7 +121,6 @@
         <a href="https://pinterest.com" target="_blank">
            <img src="images/pinterest.svg" alt="Pinterest" class="footer__social-icon">
         </a>
-        
       </div>
     </footer>
   </body>

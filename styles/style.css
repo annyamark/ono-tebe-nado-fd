@@ -1,5 +1,7 @@
 * {
   font-family: 'Raleway', sans-serif !important;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .header {
@@ -121,12 +123,11 @@
   font-weight: 700;
   font-size: 69px;
   line-height: 115%;
-  letter-spacing: 28px;
+  letter-spacing: 27px;
   text-transform: uppercase;
   color: #FFFFFF;
   width: 100%;
   display: flex;
-  margin-left: -10px;
 }
 
 .title-word-left {
@@ -134,6 +135,8 @@
   justify-self: start;
   align-self: start;
   justify-content: start;
+  
+  margin-right: 80px;
 }
 
 .title-word-center {
@@ -142,7 +145,8 @@
   justify-self: center;
   justify-content: center;
   align-self: center;
-  margin-right: -32px;
+  margin-right: -35px;
+  margin-left: -20px;
 }
 
 .title-word-right {
@@ -152,8 +156,8 @@
   align-self: end;
   text-align: right;
   justify-content: end;
-  margin-right: -28px; 
-  margin-left: -24px;
+  margin-right: -26px; 
+  margin-left: -20px;
 }
 
 .description-text-container {
@@ -229,7 +233,7 @@
     ". . . . ." 
     "lot-1 . lot-2 . lot-3"
     "more . . . .";
-   margin-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 /* Заголовок "ЛОТЫ" */
@@ -249,127 +253,86 @@
   margin-top: 0;
 }
 
-/* Контейнеры для лотов */
-.lot-card-film,
-.lot-card-book,
-.lot-card-picture {
-  position: relative;
-  width: 334px;
-  height: 596px;
+/* Список лотов */
+.lots-list {
+  grid-area: lot-1 / 1 / lot-3 / 6; /* занимает всю область лотов */
+  display: contents; /* элементы списка становятся частью грида */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* Позиционирование лотов */
-.lot-film {
+/* Элементы списка занимают грид-области */
+.lots-item.lot-film {
   grid-area: lot-1;
   justify-self: start;
-  background-image: url('../images/card-lot-01.jpg');
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 
-.lot-book {
+.lots-item.lot-book {
   grid-area: lot-2;
   justify-self: center;
-  background-image: url('../images/card-lot-02.jpg');
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 
-.lot-picture {
+.lots-item.lot-picture {
   grid-area: lot-3;
-  justify-self: end; 
-  background-image: url('../images/card-lot-03.jpg');
+  justify-self: end;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ КАРТОЧЕК */
+.lot-card {
+  display: block;
+  width: 334px;
+  height: 596px;
+  position: relative;
+  padding: 48px 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #FFFFFF;
+  justify-content: space-between;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 
-/* Первый лот */
-.lot-card-film h3 {
+/* Уникальные фоны */
+.lot-film .lot-card {
+  background-image: url('../images/card-lot-01.jpg');
+}
+
+.lot-book .lot-card {
+  background-image: url('../images/card-lot-02.jpg');
+}
+
+.lot-picture .lot-card {
+  background-image: url('../images/card-lot-03.jpg');
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ЗАГОЛОВКОВ И ОПИСАНИЙ */
+.lot-card__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  z-index: 2;
   position: absolute;
   top: 48px;
   left: 40px;
   right: 40px;
-  color: #FFFFFF;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2;
-  margin: 0;
-  z-index: 2;
-  text-transform: uppercase;
 }
 
-.lot-card-film p {
-  position: absolute;
-  top: 404px;
-  left: 40px;
-  right: 40px;
-  bottom: 48px;
-  color: #FFFFFF;
+.lot-card__description {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
   margin: 0;
   z-index: 2;
-
-}
-
-/* Второй лот */
-.lot-card-book h3 {
-  margin: 48px 0 0 40px;
-  height: auto;
-  color: #FFFFFF;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2;
-  z-index: 2;
-  text-transform: uppercase;
-  white-space: normal;
-}
-
-.lot-card-book p {
-  position: absolute;
-  top: 188px;
-  left: 40px;
-  right: 40px;
+   position: absolute;
   bottom: 48px;
-  color: #FFFFFF;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  margin: 0;
-  z-index: 2;
-}
-
-/* Третий лот */
-.lot-card-picture h3 {
-  position: absolute;
-  top: 48px;
   left: 40px;
   right: 40px;
-  color: #FFFFFF;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2;
-  margin: 0;
-  z-index: 2;
-  text-transform: uppercase;
-}
-
-.lot-card-picture p {
-  position: absolute;
-  top: 284px;
-  left: 40px;
-  right: 40px;
-  bottom: 48px;
-  color: #FFFFFF;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  margin: 0;
-  z-index: 2;
 }
 
 .lots-more {
@@ -382,6 +345,7 @@
   font-weight: 400;
   font-size: 20px;
   color: #000;
+  text-decoration: none;
 }
 
 .about {
@@ -453,6 +417,7 @@
   grid-auto-rows: auto;
   align-items: start;
   padding-right: 50px;
+  
 }
 
 .footer__contacts {
