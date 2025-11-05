@@ -3,7 +3,7 @@
   margin-top: 0px;
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
-}
+}        
 
 .header .menu-column {
   grid-column: 1;
@@ -11,18 +11,15 @@
   margin-left: 50px; 
 }
 
-/* Убираем старые стили */
 .menu-links {
   display: flex;
   align-items: center;
 }
 
-/* ОБЩИЕ СТИЛИ МЕНЮ */
 .menu-list {
   list-style: circle;
   margin: 0;
   padding: 0;
-  
 }
 
 .menu-link {
@@ -37,11 +34,9 @@
   align-items: center;
 }
 
-
 .menu--horizontal .menu-list {
   display: flex;
   align-items: center;
-  
 }
 
 .menu-item {
@@ -56,6 +51,7 @@
 .menu-item .menu-main{
   text-decoration: none;
 }
+
 /* Логотип - вторая колонка */
 .logo-column {
   grid-column: 2; 
@@ -102,6 +98,7 @@
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
+
 .cover-inner {
   width: 1000px;
   height: 385px;
@@ -165,11 +162,10 @@
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
-  padding: 0; /* ← создаем высоту через padding */
+  padding: 0;
   box-sizing: border-box;
   border: none;
   justify-items: start;
-  /* height: 51px; ← УБРАТЬ */
 }
 
 .description-text {
@@ -218,7 +214,6 @@
 
 .lots {
   width: 1052px;
- 
   margin: 0 auto;
   display: grid;
   grid-template-columns: 334px 25px 334px 25px 334px;
@@ -342,7 +337,6 @@
 
 .about {
   width: 1052px;
-  
   margin: 120px auto 180px auto;
   display: flex;
   position: relative;
@@ -369,17 +363,16 @@
   height: 114px;
 }
 
-/* Правый блок с контентом */
 .about__content {
-  margin-left: 359px; /* отступ слева для всего контента */
-  padding-top: 136px; /* отступ сверху для заголовка */
+  margin-left: 359px;
+  padding-top: 136px; 
   flex: 1;
 }
 
 /* Заголовок */
 .about__header {
   width: 291px;
-  margin-bottom: 10px; /* 283-136-47=100px примерно, регулируй */
+  margin-bottom: 10px; 
 }
 
 .about__title {
@@ -393,7 +386,7 @@
 /* Первый абзац */
 .about__text1 {
   width: 688px;
-  margin-top: 100px; /* 283 - 136 = 147px от заголовка */
+  margin-top: 100px; 
   margin-bottom: 0;
   letter-spacing: 0.5px;
 }
@@ -402,7 +395,7 @@
 .about__text2 {
   width: 693px;
   margin-top: 24px;
-  letter-spacing: 0.5px; /* 427 - 283 = 144px от первого текста */
+  letter-spacing: 0.5px; 
 }
 
 .about__paragraph {
@@ -425,30 +418,29 @@
   width: 264.57px;
   margin-left: 50px;
   margin-bottom: 82px;
-  margin-top: 0; /* отступ сверху 0 */
+  margin-top: 0; 
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   line-height: 1.3;
   grid-column: 1;
-  display: block; /* или inline */
+  display: block;
   border: none;
 }
 
-/* Меню */
 .footer .menu-column {
   grid-column: 3; 
   width: 163.9px;
   margin-bottom: 115px;
-  margin-top: 1px; /* отступ сверху 1 */
-  justify-self: center; /* поменял с center на start */
-  align-self: center; /* поменял с end на start */
+  margin-top: 1px; 
+  justify-self: center; 
+  align-self: center; 
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: 18px;
   line-height: 1.3; 
   list-style: none; 
-  text-align: center;/* исправил с 0.5 */
+  text-align: center;
 }
 
 .footer .menu-column ul {
@@ -457,7 +449,6 @@
   padding: 0;
 }
 
-/* Центрировать ссылки */
 .footer .menu-column a {
   text-align: center;
   display: block;
@@ -471,15 +462,14 @@
   margin-top: 1px;
   margin-right: 50px;
   display: flex;
-  justify-content: space-between; /* ← ОДИН justify-content */
+  justify-content: space-between; 
   gap: 48px;
 }
 
-/* Применить flex:1 к ссылкам */
 .social a {
   flex: 1;
   display: flex;
-  justify-content: center; /* центрируем иконки внутри ссылок */
+  justify-content: center;
 }
 
 .social-icon {
