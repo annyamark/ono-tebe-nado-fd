@@ -164,8 +164,6 @@
   padding-left: 50px;
   box-sizing: border-box;
   border: none;
-  
- 
 }
 
 .description-text {
@@ -180,7 +178,6 @@
   letter-spacing: 0.5px;
   word-spacing: 15px;
   text-align: left;
- 
 }
 
 .button {
@@ -419,7 +416,10 @@
   margin: 0;
   padding-left: 154px;
   min-width: 163.9px;
-  line-height: 0.1;
+}
+
+.menu--vertical .menu-link {
+  line-height: 0.7;
 }
 
 .menu-link.menu-main {
