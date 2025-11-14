@@ -227,6 +227,7 @@
 /* Список лотов */
 .lots-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; /* центрируем карточки по горизонтали */
   gap: 25px; 
   margin: 0;
@@ -289,6 +290,7 @@
   margin: 0 0 20px 0;
   text-transform: uppercase;
   z-index: 2;
+  text-decoration: underline; 
 }
 
 .lot-card__description {
